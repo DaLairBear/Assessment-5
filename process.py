@@ -15,4 +15,12 @@ def sales_reports(log_file):
             print(line)
 
 #telling the function to run
-sales_reports(log_file)
+#sales_reports(log_file)
+
+def orders_over_ten(log_file):
+    for line in log_file:
+        value = line.split(' ')
+        if int(value[2]) > 10:
+            print(line)
+
+orders_over_ten(log_file)
